@@ -13,6 +13,8 @@ public class FirstServlet implements Servlet, Serializable {
 
     private transient ServletConfig config;
 
+
+
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
         this.config = config;
@@ -28,7 +30,8 @@ public class FirstServlet implements Servlet, Serializable {
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
         logger.info("!!!New request!!!");
-        servletResponse.getWriter().println("Little step...");
+
+        servletResponse.getWriter().println("Little step... Маленький шаг");
     }
 
     @Override

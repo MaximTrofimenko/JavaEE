@@ -19,11 +19,14 @@ public class FirstHttpServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setCharacterEncoding("UTF-8");
+
         resp.getWriter().println("<h1>HTTP SERVLET</h1>");
         resp.getWriter().println("<p>ContextPath   :" + req.getContextPath() + "</p>");
         resp.getWriter().println("<p>ServletPath   :" + req.getServletPath() + "</p>");
         resp.getWriter().println("<p>PathInfo   :" + req.getPathInfo() + "</p>");
         resp.getWriter().println("<p>QueryString   :" + req.getQueryString() + "</p>");
+
 
     }
 }
