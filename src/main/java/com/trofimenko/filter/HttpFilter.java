@@ -15,8 +15,11 @@ public class HttpFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        servletResponse.getWriter().println("<h1>HEADER</h1>");
         servletResponse.setCharacterEncoding("UTF-8");
+        servletResponse.setContentType("text/html");
+
+        servletResponse.getWriter().println("<h1>HEADER</h1>");
+
         filterChain.doFilter(servletRequest,servletResponse);
 
         servletResponse.getWriter().println("<h1>FOOTER</h1>");
