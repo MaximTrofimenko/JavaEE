@@ -14,7 +14,7 @@
 
 <%= LocalDateTime.now().toString() %>
 
-<% for (int i = 0; i < 10; i++) { %>
+<% for (int i = 0; i < 5; i++) { %>
 <h2>Норвегия</h2>
 <% } %>
 
@@ -24,13 +24,7 @@
 
 <c:url value="/index.jsp" var="Главная"/>
 
-
 <a href="${Главная}">Main</a>
-
-
-
-
-
 
 </body>
 </html>
